@@ -3,4 +3,5 @@
 
 CMakeFiles/Algorithms.dir/main.cpp.obj: ../bubble_sort.cpp
 CMakeFiles/Algorithms.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/Algorithms.dir/main.cpp.obj: ../selection_sort.cpp
 
