@@ -8,7 +8,7 @@
 #include "../bubble_sort.cpp"
 #include "../selection_sort.cpp"
 #include "../insertion_sort.cpp"
-//#include "../merge_sort.cpp"
+#include "../merge_sort.cpp"
 
 TEST(BubbleSort, OddNumOfElementsCase) {
 
@@ -81,14 +81,21 @@ TEST(InsertionSort, EmptyArray){
     ASSERT_EQ(v, v2);
 
 }
-/*
-TEST(MergeSort, OddNumOfElementsCase) {
 
-    std::vector<int> v{8, 2, 4, 1, 3};
+
+TEST(MergeSort, OddNumOfElementsCase) {
+    std::vector<int> v1 { 8, 2, 4, 1, 3, 5, 2, 1, 0, 99, 3, 4, 5, 4, 4};
+    std::vector<int> v2 { 7, 3, 5, 2, 3, 1, 5, 8};
+    std::vector<int> v {8, 2, 4, 1, 3};
     std::vector<int> vResult{1, 2, 3, 4, 8};
 
     mergeSort(v);
+    mergeSort(v1);
+    mergeSort(v2);
+
     ASSERT_EQ(v, vResult);
+    ASSERT_EQ(v1, (std::vector<int> { 0, 1, 1, 2, 2, 3, 3, 4, 4, 4, 4, 5, 5, 8, 99 } ));
+    ASSERT_EQ(v2, (std::vector<int> {  1, 2, 3, 3, 5, 5, 7, 8 } ));
 }
 
 TEST(MergeSort, EvenNumOfElementsCase){
@@ -105,4 +112,3 @@ TEST(MergeSort, EmptyArray){
     ASSERT_EQ(v, v2);
 
 }
-*/
