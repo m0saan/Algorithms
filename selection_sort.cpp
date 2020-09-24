@@ -7,7 +7,7 @@
 void swap(std::vector<int> &vInput, size_t i, int index);
 
 void selectionSort(std::vector<int>& vInput) {
-    for (size_t i = 0; i < vInput.size() - 1; ++i) {
+    for (size_t i = 0; i < vInput.size(); ++i) {
         auto min = vInput[i];
         int index = i;
         for (size_t j = i + 1; j < vInput.size(); ++j) {
