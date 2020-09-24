@@ -3,14 +3,20 @@
 #include <vector>
 
 void merge_results(std::vector<int>& left, std::vector<int>& right, std::vector<int>& out){
+  //  if (out.size() == 2 && out[0] <= out[1] && left.size() == right.size()) return;
     auto leftIndex = 0;
     auto rightIndex = 0;
-    for (int & i : out) {
-        if (left[leftIndex] > right[rightIndex] && rightIndex < right.size())
-            i = right[rightIndex++];
-        else
-            i = left[leftIndex++];
+    int i;
+    for (i = 0; i < out.size() && leftIndex < left.size() && rightIndex < right.size(); i++) {
+        auto min = std::min(left[leftIndex], right[rightIndex]);
+        if (min == left[leftIndex]) leftIndex++;
+        else rightIndex++;
+        out[i] = min;
     }
+    while (leftIndex < left.size())
+        out[i++] = left[leftIndex++];
+    while(rightIndex < right.size())
+        out[i++] = right[rightIndex++];
 }
 
 void sort(std::vector<int>& inputArray){
