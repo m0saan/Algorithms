@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "Algorithms.exe"
   "Algorithms.exe.manifest"
   "Algorithms.pdb"
+  "CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj"
   "CMakeFiles/Algorithms.dir/main.cpp.obj"
   "libAlgorithms.dll.a"
 )
