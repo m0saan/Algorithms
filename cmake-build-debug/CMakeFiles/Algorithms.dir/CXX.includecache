@@ -343,11 +343,19 @@ C:/Users/one for all/CLionProjects/Algorithms/insertion_sort.cpp
 C:/Users/one for all/CLionProjects/Algorithms/merge_sort.cpp
 ../quick_sort.cpp
 C:/Users/one for all/CLionProjects/Algorithms/quick_sort.cpp
+../counting_sort.cpp
+C:/Users/one for all/CLionProjects/Algorithms/counting_sort.cpp
 
 C:/Users/one for all/CLionProjects/Algorithms/bubble_sort.cpp
 vector
 -
 iostream
+-
+
+C:/Users/one for all/CLionProjects/Algorithms/counting_sort.cpp
+vector
+-
+algorithm
 -
 
 C:/Users/one for all/CLionProjects/Algorithms/insertion_sort.cpp
