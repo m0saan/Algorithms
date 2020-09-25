@@ -26,6 +26,7 @@ CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj
  C:/Users/one for all/CLionProjects/Algorithms/bubble_sort.cpp
  C:/Users/one for all/CLionProjects/Algorithms/insertion_sort.cpp
  C:/Users/one for all/CLionProjects/Algorithms/merge_sort.cpp
+ C:/Users/one for all/CLionProjects/Algorithms/quick_sort.cpp
  C:/Users/one for all/CLionProjects/Algorithms/selection_sort.cpp
 CMakeFiles/Algorithms.dir/main.cpp.obj
  ../lib/googletest/googletest/include/gtest/gtest-death-test.h

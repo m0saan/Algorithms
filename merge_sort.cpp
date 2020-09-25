@@ -1,37 +1,29 @@
-
-
 #include <vector>
 
-void merge_results(std::vector<int>& left, std::vector<int>& right, std::vector<int>& out){
-  //  if (out.size() == 2 && out[0] <= out[1] && left.size() == right.size()) return;
-    auto leftIndex = 0;
-    auto rightIndex = 0;
-    int i;
-    for (i = 0; i < out.size() && leftIndex < left.size() && rightIndex < right.size(); i++) {
-        auto min = std::min(left[leftIndex], right[rightIndex]);
-        if (min == left[leftIndex]) leftIndex++;
-        else rightIndex++;
-        out[i] = min;
+void merge_results(const std::vector<int>& left, const std::vector<int>& right, std::vector<int>& inputVec){
+    size_t iLeft = 0;
+    size_t iRight = 0;
+    size_t  i;
+    for (i = 0; i < inputVec.size() && iLeft < left.size() && iRight < right.size(); ++i) {
+        auto min = std::min(left[iLeft], right[iRight]);
+        min == left[iLeft] ? iLeft++ : iRight++;
+        inputVec[i] = min;
     }
-    while (leftIndex < left.size())
-        out[i++] = left[leftIndex++];
-    while(rightIndex < right.size())
-        out[i++] = right[rightIndex++];
+    while (iLeft < left.size()) inputVec[i++] = left[iLeft++];
+    while (iRight < right.size()) inputVec[i++] = right[iRight++];
 }
 
-void sort(std::vector<int>& inputArray){
-    auto middle = static_cast<int>(inputArray.size() / 2);
+void mergeSort(std::vector<int>& vector){
+    auto middle = static_cast<int>(vector.size() / 2);
 
     if (!(middle)) return;
-    std::vector<int> vLeft(inputArray.begin(), inputArray.begin() + middle);
-    std::vector<int> vRight(inputArray.begin() + middle, inputArray.end());
 
-    sort(vLeft);
-    sort(vRight);
+    // divide
+    std::vector<int> left { vector.begin(), vector.begin() + middle};
+    std::vector<int> right { vector.begin() + middle, vector.end() };
 
-    merge_results(vLeft, vRight, inputArray);
-}
+    mergeSort(left);
+    mergeSort(right);
 
-void mergeSort(std::vector<int>& inputArray){
-    sort(inputArray);
+    merge_results(left, right, vector);
 }

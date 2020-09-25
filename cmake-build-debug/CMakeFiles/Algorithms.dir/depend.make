@@ -25,6 +25,7 @@ CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../Tests/tests.cpp
 CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../bubble_sort.cpp
 CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../insertion_sort.cpp
 CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../merge_sort.cpp
+CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../quick_sort.cpp
 CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../selection_sort.cpp
 
 CMakeFiles/Algorithms.dir/main.cpp.obj: ../lib/googletest/googletest/include/gtest/gtest-death-test.h
