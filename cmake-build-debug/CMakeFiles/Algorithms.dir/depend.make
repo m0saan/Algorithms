@@ -23,6 +23,7 @@ CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../lib/googletest/googletest/incl
 CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../lib/googletest/googletest/include/gtest/internal/gtest-type-util.h
 CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../Tests/tests.cpp
 CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../bubble_sort.cpp
+CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../bucket_sort.cpp
 CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../counting_sort.cpp
 CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../insertion_sort.cpp
 CMakeFiles/Algorithms.dir/Tests/tests.cpp.obj: ../merge_sort.cpp

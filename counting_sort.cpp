@@ -3,7 +3,7 @@
 #include <algorithm>
 
 void countingSort(std::vector<int>& vector){
-    if (vector.size() == 1) return;
+    if (vector.size() == 1 || !vector.size()) return;
     std::vector<int> counter ( *std::max_element(vector.begin(), vector.end()) + 1, 0);
     for (auto& item : vector)
         counter[item] += 1;
