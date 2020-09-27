@@ -5,13 +5,13 @@
 #include <gtest/gtest.h>
 #include <iostream>
 #include <vector>
-#include "../bubble_sort.cpp"
-#include "../selection_sort.cpp"
-#include "../insertion_sort.cpp"
-#include "../merge_sort.cpp"
-#include "../quick_sort.cpp"
-#include "../counting_sort.cpp"
-#include "../bucket_sort.cpp"
+#include "../sort_algorithms/bubble_sort.cpp"
+#include "../sort_algorithms/selection_sort.cpp"
+#include "../sort_algorithms/insertion_sort.cpp"
+#include "../sort_algorithms/merge_sort.cpp"
+#include "../sort_algorithms/quick_sort.cpp"
+#include "../sort_algorithms/counting_sort.cpp"
+#include "../sort_algorithms/bucket_sort.cpp"
 
 TEST(BubbleSort, OddNumOfElementsCase) {
 
