@@ -2,3 +2,5 @@ cmake-build-debug/
 lib/
 a.out
 .idea/
+CMakeLists.txt
+main.cpp
