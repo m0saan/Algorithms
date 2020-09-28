@@ -20,5 +20,6 @@ int re_binary_search(std::vector<T>& vector, const T& target, int left, int righ
 
 template<typename T>
 int recursive_binary_search(std::vector<T>& vector, const T& target){
+
     return re_binary_search(vector, target, 0, static_cast<int>(vector.size() - 1));
 }

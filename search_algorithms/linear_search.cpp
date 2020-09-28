@@ -5,6 +5,7 @@
 #include <vector>
 
 template<typename T>
+
 int linearSearch(std::vector <T> &vector, const T &item) {
     for (size_t i{}; i < vector.size(); ++i)
         if (item == vector[i]) return i;
