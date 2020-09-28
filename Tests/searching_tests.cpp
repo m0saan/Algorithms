@@ -3,6 +3,7 @@
 #include "../search_algorithms/iterative_binary_search.cpp"
 #include "../search_algorithms/recursive_binary_search.cpp"
 #include "../search_algorithms/ternary_search.cpp"
+#include "../search_algorithms/jump_search.cpp"
 
 
 TEST(LinearSearch, LinearSearchAllTestCases){
@@ -39,5 +40,18 @@ TEST(TernarySearch, TernarySearchTests){
     EXPECT_EQ(ternary_search(v, 4), 3);
     EXPECT_EQ(ternary_search(v, 101) , -1);
     EXPECT_EQ(ternary_search(v, 10) , 9);
+    EXPECT_EQ(ternary_search(vEmpty, 2), -1);
+}
 
+TEST(JumpSearch, JumpSearchTests){
+    std::vector<int> v { 1, 2, 4, 5, 8, 11, 18, 29};
+    std::vector<int> vEmpty {};
+
+    EXPECT_EQ(jumpSearch(v, 1), 0);
+    EXPECT_EQ(jumpSearch(v, 2) , 1);
+    EXPECT_EQ(jumpSearch(v, 4), 2);
+    EXPECT_EQ(jumpSearch(v, 11), 5);
+    EXPECT_EQ(jumpSearch(v, 101), -1);
+    EXPECT_EQ(jumpSearch(v, 29), 7);
+    EXPECT_EQ(jumpSearch(vEmpty, 2), -1);
 }
