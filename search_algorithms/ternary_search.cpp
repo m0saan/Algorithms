@@ -19,9 +19,7 @@ int rec_ternary_search(std::vector<int>& vector, const int& target, int left, in
         return rec_ternary_search(vector, target, left, middle1 - 1);
     else if (vector[middle2] < target)
         return rec_ternary_search(vector, target, middle2 + 1, right);
-    else if (vector[middle1] < target && vector[middle2] > target)
-        return rec_ternary_search(vector, target, middle1 + 1, middle2 - 1);
-    return -1;
+    return rec_ternary_search(vector, target, middle1 + 1, middle2 - 1);
 }
 
 int ternary_search(std::vector<int>& vector, const int& target){
