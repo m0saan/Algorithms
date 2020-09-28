@@ -6,7 +6,7 @@
 #include <cmath>
 
 int jumpSearch(std::vector<int>& vector, const int& target) {
-    size_t blockSize = sqrt(vector.size());
+    size_t blockSize = static_cast<int>(sqrt(vector.size()));
     size_t start = 0;
     size_t next = blockSize;
     while (start < vector.size() && next <= vector.size()){
