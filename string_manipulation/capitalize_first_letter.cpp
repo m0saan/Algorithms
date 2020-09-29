@@ -25,7 +25,7 @@ void capitalizeFirstLetter2(std::string& inputStr){
     std::istringstream iStringStream(inputStr);
     std::vector<std::string> v;
 
-    auto comp = [](std::string str) {
+    auto comp = [](std::string str) mutable {
         std::for_each(str.begin(), str.end(), tolower);
         toupper(str[0]);
         return str;
@@ -40,17 +40,8 @@ void capitalizeFirstLetter2(std::string& inputStr){
 }
 
 int main(){
-    auto start = std::chrono::high_resolution_clock::now();
-    std::string str { "Trees are beautiful" };
-    auto end = std::chrono::high_resolution_clock::now();
-    std::cout << std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count() << '\n';
-
-    start = std::chrono::high_resolution_clock::now();
-    std::string str1 { "Trees are beautiful" };
-    end = std::chrono::high_resolution_clock::now();
-    std::cout << std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count() << '\n';
+    std::string str { "TREES ARE BEAUTIFUL" };
 
     capitalizeFirstLetter2(str);
-    capitalizeFirstLetter(str1);
     std::cout << str << std::endl;
 }
