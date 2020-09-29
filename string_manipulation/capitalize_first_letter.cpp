@@ -26,22 +26,15 @@ void capitalizeFirstLetter2(std::string& inputStr){
     std::vector<std::string> v;
 
     auto comp = [](std::string str) mutable {
-        std::for_each(str.begin(), str.end(), tolower);
-        toupper(str[0]);
-        return str;
+        std::transform(str.begin(), str.end(), str.begin(), tolower);
+        str[0] = toupper(str[0]);
+        return std::move(str);
     };
     auto bindTwoStrings = [] (std::string& lhs, std::string& rhs) -> std::string {
-        return lhs.empty() ? rhs : lhs + " " + rhs;
+        return lhs.empty() ? std::move(rhs) : std::move(lhs + " " + rhs);
     };
 
     std::transform(std::istream_iterator<std::string>(iStringStream), std::istream_iterator<std::string>(), std::back_inserter(v), comp);
     inputStr.clear();
     inputStr  = std::accumulate(v.begin(), v.end(), inputStr, bindTwoStrings);
-}
-
-int main(){
-    std::string str { "TREES ARE BEAUTIFUL" };
-
-    capitalizeFirstLetter2(str);
-    std::cout << str << std::endl;
 }
