@@ -3,5 +3,6 @@ lib/
 a.out
 .idea/
 CMakeLists.txt
-main.cpp.vscode
+main.cpp
+.vscode
 a.out.dSYM
