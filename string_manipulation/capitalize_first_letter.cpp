@@ -2,12 +2,10 @@
 // Created by moboustt on 9/29/20.
 //
 
-#include <iostream>
 #include <string>
 #include <sstream>
 #include <numeric>
 #include <vector>
-#include <chrono>
 
 void capitalizeFirstLetter(std::string& inputStr){
     std::istringstream iStringStream(inputStr);
